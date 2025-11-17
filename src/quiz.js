@@ -34,22 +34,14 @@ class Quiz {
   }
 
   filterQuestionsByDifficulty(difficulty) {
-    if (typeof difficulty !== "number" || difficulty < 1 || difficulty > 3) {
-      return 0;
-    }
-    this.questions = this.questions.filter((questions) => {
-      return questions.difficulty === difficulty;
-    });
-
-    //  return this.questions.filter((object)=>{
-    // if (object.difficulty === difficulty){
-    //   return true;
-    // } else {
-    //   return false;
-    // }
-    //  })
+    
+  if (typeof difficulty !== "number" || difficulty < 1 || difficulty > 3) {
+    return 0;
   }
-
+  this.questions = this.questions.filter((questions) => {
+    return questions.difficulty === difficulty;
+  });
+}
   averageDifficulty() {
     const totDifficulty = this.questions.reduce((sum, obj) => {
       return sum + obj.difficulty;
