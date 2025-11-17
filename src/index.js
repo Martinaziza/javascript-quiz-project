@@ -306,4 +306,4 @@ document.addEventListener("DOMContentLoaded", () => {
     showQuestion();
   }
   
-}); // Fin del DOMContentLoaded
+}); 
